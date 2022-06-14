@@ -6,9 +6,9 @@ const drivers = ['Bobby', 'Sammy', 'Sally', 'Annette', 'Sarah', 'Bobby']
         })
     }
 
-    function fuzzyMatch(array,name){
+    function fuzzyMatch(array,letter){
         return array.filter(function(driverName){
-            return driverName.toLowerCase().startsWith(name.toLowerCase())
+            return driverName.startsWith(letter)
         })
 
     }
@@ -30,14 +30,14 @@ const drivers = ['Bobby', 'Sammy', 'Sally', 'Annette', 'Sarah', 'Bobby']
           hometown: 'Tampa Bay' }
       ];
 
-    function matchName(array,name){
+    function matchName(array,town){
         return array.filter(function(driver){
-            return driver.name.toLowerCase() === name.toLowerCase()
+            return driver.name.toLowerCase() === town.toLowerCase()
         })
 
     }
 
 
     console.log(findMatching(drivers, "Bobby"))
-    console.log(fuzzyMatch(drivers, "S"))
+    console.log(fuzzyMatch(drivers, "Y"))
     console.log(matchName(drivers2,"Annette"))
